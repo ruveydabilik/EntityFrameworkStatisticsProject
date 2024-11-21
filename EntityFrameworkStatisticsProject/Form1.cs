@@ -57,9 +57,29 @@ namespace EntityFrameworkStatisticsProject
             var totalVolume = totalStockOfGazoz * totalPriceOfGazoz;
             lblTotalPriceOfGazoz.Text = totalVolume.ToString() + " ₺";
 
+            // Stok Sayısı 100'den Az Olan Ürün Sayısı
+            var productStockLess100 = db.TblProduct.Where(x => x.ProductStock < 100).Count();
+            lblProductStockLess100.Text = productStockLess100.ToString();
+
+            // Aktif Sebze Stoğu
+
+            // Query could be done with CategoryId
+            //var activeVegetableStock = db.TblProduct.Where(x => x.CategoryId == 2 && x.ProductStatus == true).Sum(y => y.ProductStock);
+            
+            // But if we want to write it with CategoryName, it should be like this (We used sub query):
+            var activeVegetableStock = db.TblProduct.Where(x => x.CategoryId == (db.TblCategory.Where(z => z.CategoryName == "Sebze").Select(w => w.CategoryId).FirstOrDefault()) && x.ProductStatus == true).Sum(y => y.ProductStock);
+            lblActiveVegetableStock.Text = activeVegetableStock.ToString();
+
+            // Türkiye'den Yapılan Sipariş Sayısı
+
         }
 
         private void lblOrderCount_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
         {
 
         }
