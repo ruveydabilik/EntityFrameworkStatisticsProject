@@ -62,16 +62,17 @@
             this.label21 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.panel12 = new System.Windows.Forms.Panel();
-            this.label23 = new System.Windows.Forms.Label();
+            this.lblTotalPriceOfFruitEf = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
             this.panel13 = new System.Windows.Forms.Panel();
-            this.label25 = new System.Windows.Forms.Label();
+            this.lblTotalPriceOfFruitSql = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
             this.panel14 = new System.Windows.Forms.Panel();
-            this.label27 = new System.Windows.Forms.Label();
+            this.lblOrderCountFromTurkiyeEf = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
             this.panel15 = new System.Windows.Forms.Panel();
-            this.lblOrderCountFromTurkiye = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lblOrderCountFromTurkiyeSql = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
             this.panel16 = new System.Windows.Forms.Panel();
             this.label31 = new System.Windows.Forms.Label();
@@ -88,7 +89,7 @@
             this.panel20 = new System.Windows.Forms.Panel();
             this.label39 = new System.Windows.Forms.Label();
             this.label40 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -336,7 +337,7 @@
             // 
             this.lblTotalPriceOfGazoz.AutoSize = true;
             this.lblTotalPriceOfGazoz.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblTotalPriceOfGazoz.Location = new System.Drawing.Point(84, 69);
+            this.lblTotalPriceOfGazoz.Location = new System.Drawing.Point(80, 69);
             this.lblTotalPriceOfGazoz.Name = "lblTotalPriceOfGazoz";
             this.lblTotalPriceOfGazoz.Size = new System.Drawing.Size(31, 25);
             this.lblTotalPriceOfGazoz.TabIndex = 1;
@@ -397,7 +398,7 @@
             this.lblProductAveragePrice.AutoSize = true;
             this.lblProductAveragePrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblProductAveragePrice.ForeColor = System.Drawing.Color.White;
-            this.lblProductAveragePrice.Location = new System.Drawing.Point(51, 69);
+            this.lblProductAveragePrice.Location = new System.Drawing.Point(42, 69);
             this.lblProductAveragePrice.Name = "lblProductAveragePrice";
             this.lblProductAveragePrice.Size = new System.Drawing.Size(31, 25);
             this.lblProductAveragePrice.TabIndex = 1;
@@ -449,113 +450,125 @@
             // panel12
             // 
             this.panel12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(143)))), ((int)(((byte)(95)))));
-            this.panel12.Controls.Add(this.label23);
+            this.panel12.Controls.Add(this.lblTotalPriceOfFruitEf);
             this.panel12.Controls.Add(this.label24);
             this.panel12.Location = new System.Drawing.Point(751, 293);
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(231, 123);
             this.panel12.TabIndex = 14;
             // 
-            // label23
+            // lblTotalPriceOfFruitEf
             // 
-            this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label23.Location = new System.Drawing.Point(98, 69);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(31, 25);
-            this.label23.TabIndex = 1;
-            this.label23.Text = "lbl";
+            this.lblTotalPriceOfFruitEf.AutoSize = true;
+            this.lblTotalPriceOfFruitEf.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblTotalPriceOfFruitEf.Location = new System.Drawing.Point(76, 69);
+            this.lblTotalPriceOfFruitEf.Name = "lblTotalPriceOfFruitEf";
+            this.lblTotalPriceOfFruitEf.Size = new System.Drawing.Size(31, 25);
+            this.lblTotalPriceOfFruitEf.TabIndex = 1;
+            this.lblTotalPriceOfFruitEf.Text = "lbl";
             // 
             // label24
             // 
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label24.Location = new System.Drawing.Point(63, 21);
+            this.label24.Location = new System.Drawing.Point(3, 21);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(96, 18);
+            this.label24.Size = new System.Drawing.Size(197, 18);
             this.label24.TabIndex = 0;
-            this.label24.Text = "Sipariş Sayısı";
+            this.label24.Text = "Meyve Satışları Kazancı (EF)";
             // 
             // panel13
             // 
             this.panel13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(194)))), ((int)(((byte)(115)))));
-            this.panel13.Controls.Add(this.label25);
+            this.panel13.Controls.Add(this.lblTotalPriceOfFruitSql);
             this.panel13.Controls.Add(this.label26);
             this.panel13.Location = new System.Drawing.Point(505, 293);
             this.panel13.Name = "panel13";
             this.panel13.Size = new System.Drawing.Size(231, 123);
             this.panel13.TabIndex = 12;
             // 
-            // label25
+            // lblTotalPriceOfFruitSql
             // 
-            this.label25.AutoSize = true;
-            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label25.Location = new System.Drawing.Point(97, 69);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(31, 25);
-            this.label25.TabIndex = 1;
-            this.label25.Text = "lbl";
+            this.lblTotalPriceOfFruitSql.AutoSize = true;
+            this.lblTotalPriceOfFruitSql.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblTotalPriceOfFruitSql.Location = new System.Drawing.Point(80, 69);
+            this.lblTotalPriceOfFruitSql.Name = "lblTotalPriceOfFruitSql";
+            this.lblTotalPriceOfFruitSql.Size = new System.Drawing.Size(31, 25);
+            this.lblTotalPriceOfFruitSql.TabIndex = 1;
+            this.lblTotalPriceOfFruitSql.Text = "lbl";
             // 
             // label26
             // 
             this.label26.AutoSize = true;
             this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label26.Location = new System.Drawing.Point(63, 21);
+            this.label26.Location = new System.Drawing.Point(3, 21);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(100, 18);
+            this.label26.Size = new System.Drawing.Size(208, 18);
             this.label26.TabIndex = 0;
-            this.label26.Text = "Müşteri Sayısı";
+            this.label26.Text = "Meyve Satışları Kazancı (SQL)";
             // 
             // panel14
             // 
             this.panel14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(100)))), ((int)(((byte)(147)))));
-            this.panel14.Controls.Add(this.label27);
+            this.panel14.Controls.Add(this.label3);
+            this.panel14.Controls.Add(this.lblOrderCountFromTurkiyeEf);
             this.panel14.Controls.Add(this.label28);
             this.panel14.Location = new System.Drawing.Point(258, 293);
             this.panel14.Name = "panel14";
             this.panel14.Size = new System.Drawing.Size(231, 123);
             this.panel14.TabIndex = 11;
             // 
-            // label27
+            // lblOrderCountFromTurkiyeEf
             // 
-            this.label27.AutoSize = true;
-            this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label27.Location = new System.Drawing.Point(99, 69);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(31, 25);
-            this.label27.TabIndex = 1;
-            this.label27.Text = "lbl";
+            this.lblOrderCountFromTurkiyeEf.AutoSize = true;
+            this.lblOrderCountFromTurkiyeEf.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblOrderCountFromTurkiyeEf.Location = new System.Drawing.Point(99, 78);
+            this.lblOrderCountFromTurkiyeEf.Name = "lblOrderCountFromTurkiyeEf";
+            this.lblOrderCountFromTurkiyeEf.Size = new System.Drawing.Size(31, 25);
+            this.lblOrderCountFromTurkiyeEf.TabIndex = 1;
+            this.lblOrderCountFromTurkiyeEf.Text = "lbl";
             // 
             // label28
             // 
             this.label28.AutoSize = true;
             this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label28.Location = new System.Drawing.Point(77, 21);
+            this.label28.Location = new System.Drawing.Point(25, 21);
             this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(83, 18);
+            this.label28.Size = new System.Drawing.Size(183, 18);
             this.label28.TabIndex = 0;
-            this.label28.Text = "Ürün Sayısı";
+            this.label28.Text = "Türkiye\'den Yapılan Sipariş";
             // 
             // panel15
             // 
             this.panel15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(179)))), ((int)(((byte)(142)))));
             this.panel15.Controls.Add(this.label2);
-            this.panel15.Controls.Add(this.lblOrderCountFromTurkiye);
+            this.panel15.Controls.Add(this.lblOrderCountFromTurkiyeSql);
             this.panel15.Controls.Add(this.label30);
             this.panel15.Location = new System.Drawing.Point(12, 293);
             this.panel15.Name = "panel15";
             this.panel15.Size = new System.Drawing.Size(231, 123);
             this.panel15.TabIndex = 10;
             // 
-            // lblOrderCountFromTurkiye
+            // label2
             // 
-            this.lblOrderCountFromTurkiye.AutoSize = true;
-            this.lblOrderCountFromTurkiye.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblOrderCountFromTurkiye.Location = new System.Drawing.Point(97, 78);
-            this.lblOrderCountFromTurkiye.Name = "lblOrderCountFromTurkiye";
-            this.lblOrderCountFromTurkiye.Size = new System.Drawing.Size(31, 25);
-            this.lblOrderCountFromTurkiye.TabIndex = 1;
-            this.lblOrderCountFromTurkiye.Text = "lbl";
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label2.Location = new System.Drawing.Point(63, 49);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(91, 18);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Sayısı (SQL)";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // lblOrderCountFromTurkiyeSql
+            // 
+            this.lblOrderCountFromTurkiyeSql.AutoSize = true;
+            this.lblOrderCountFromTurkiyeSql.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblOrderCountFromTurkiyeSql.Location = new System.Drawing.Point(97, 78);
+            this.lblOrderCountFromTurkiyeSql.Name = "lblOrderCountFromTurkiyeSql";
+            this.lblOrderCountFromTurkiyeSql.Size = new System.Drawing.Size(31, 25);
+            this.lblOrderCountFromTurkiyeSql.TabIndex = 1;
+            this.lblOrderCountFromTurkiyeSql.Text = "lbl";
             // 
             // label30
             // 
@@ -721,16 +734,15 @@
             this.label40.TabIndex = 0;
             this.label40.Text = "Kategori Sayısı";
             // 
-            // label2
+            // label3
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label2.Location = new System.Drawing.Point(90, 49);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(47, 18);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Sayısı";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label3.Location = new System.Drawing.Point(69, 49);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(80, 18);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "Sayısı (EF)";
             // 
             // Form1
             // 
@@ -840,16 +852,16 @@
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Panel panel12;
-        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label lblTotalPriceOfFruitEf;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Panel panel13;
-        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label lblTotalPriceOfFruitSql;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Panel panel14;
-        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.Label lblOrderCountFromTurkiyeEf;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.Panel panel15;
-        private System.Windows.Forms.Label lblOrderCountFromTurkiye;
+        private System.Windows.Forms.Label lblOrderCountFromTurkiyeSql;
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.Panel panel16;
         private System.Windows.Forms.Label label31;
@@ -867,6 +879,7 @@
         private System.Windows.Forms.Label label39;
         private System.Windows.Forms.Label label40;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
     }
 }
 

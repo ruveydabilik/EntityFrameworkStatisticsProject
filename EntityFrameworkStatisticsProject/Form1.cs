@@ -70,7 +70,28 @@ namespace EntityFrameworkStatisticsProject
             var activeVegetableStock = db.TblProduct.Where(x => x.CategoryId == (db.TblCategory.Where(z => z.CategoryName == "Sebze").Select(w => w.CategoryId).FirstOrDefault()) && x.ProductStatus == true).Sum(y => y.ProductStock);
             lblActiveVegetableStock.Text = activeVegetableStock.ToString();
 
-            // Türkiye'den Yapılan Sipariş Sayısı
+            // Türkiye'den Yapılan Sipariş Sayısı (SQL Query İle)
+            // db.Database searches the entire database and returns the result. In other words, it is equivalent to writing a query in the database.
+            var orderCountFromTurkiyeSql = db.Database.SqlQuery<int>("SELECT COUNT(*) FROM TblOrder WHERE CustomerId IN(SELECT CustomerId FROM TblCustomer WHERE CustomerCountry = 'Türkiye')").FirstOrDefault();
+            lblOrderCountFromTurkiyeSql.Text = orderCountFromTurkiyeSql.ToString();
+
+            // Türkiye'den Yapılan Sipariş Sayısı (EF İle)
+            var turkishCustomerIds = db.TblCustomer.Where(x => x.CustomerCountry == "Türkiye").Select(y => y.CustomerId).ToList();
+            var orderCountFromTurkiyeEf = db.TblOrder.Count(z => turkishCustomerIds.Contains(z.CustomerId.Value));
+            lblOrderCountFromTurkiyeEf.Text = orderCountFromTurkiyeEf.ToString();
+
+            // Meyve Satışları Kazancı (SQL Query İle)
+            var totalPriceOfFruitSql = db.Database.SqlQuery<decimal>("Select Sum(o.TotalPrice) From TblOrder o Join TblProduct p On o.ProductId=p.ProductId Join TblCategory c On p.CategoryId=c.CategoryId Where c.CategoryName='Meyve'").FirstOrDefault();
+            lblTotalPriceOfFruitSql.Text = totalPriceOfFruitSql.ToString() + " ₺";
+
+            // Meyve Satışları Kazancı (EF İle)
+            var totalPriceOfFruitEf = (from o in db.TblOrder
+                                       join p in db.TblProduct on o.ProductId equals p.ProductId
+                                       join c in db.TblCategory on p.CategoryId equals c.CategoryId
+                                       where c.CategoryName == "Meyve"
+                                       select o.TotalPrice).Sum();
+            lblTotalPriceOfFruitEf.Text = totalPriceOfFruitEf.ToString() + " ₺";
+
 
         }
 
