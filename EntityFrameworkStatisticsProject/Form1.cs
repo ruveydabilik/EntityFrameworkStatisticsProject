@@ -92,7 +92,33 @@ namespace EntityFrameworkStatisticsProject
                                        select o.TotalPrice).Sum();
             lblTotalPriceOfFruitEf.Text = totalPriceOfFruitEf.ToString() + " ₺";
 
+            // Son Eklenen Ürün
+            var lastAddedProduct = db.TblProduct.OrderByDescending(x => x.ProductId).Select(y => y.ProductName).FirstOrDefault();
+            lblLastAddedProduct.Text = lastAddedProduct.ToString();
 
+            // Son Eklenen Ürün Kategorisi
+            var lastProductCategoryId = db.TblProduct.OrderByDescending(x => x.ProductId).Select(y => y.CategoryId).FirstOrDefault();
+            var lastProductCategoryName = db.TblCategory.Where(x => x.CategoryId == lastProductCategoryId).Select(y => y.CategoryName).FirstOrDefault();
+            lblCategoryOfLastAddedProduct.Text= lastProductCategoryName.ToString();
+
+            // Aktif Ürün Sayısı
+            var activeProductCount = db.TblProduct.Where(x => x.ProductStatus == true).Count();
+            lblActiveProductCount.Text = activeProductCount.ToString();
+
+            // Toplam Meyve Suyu Kazancı
+            var stock = db.TblProduct.Where(x => x.ProductName == "Meyve Suyu").Select(y => y.ProductStock).FirstOrDefault();
+            var price = db.TblProduct.Where(y => y.ProductName == "Meyve Suyu").Select(z => z.ProductPrice).FirstOrDefault();
+            var totalAmount = stock * price;
+            lblFruitJuiceEarnings.Text = totalAmount.ToString() + " ₺";
+
+            // Son Eklenen Müşteri
+            var lastCustomerId = db.TblOrder.OrderByDescending(x => x.OrderId).Select(y => y.CustomerId).FirstOrDefault();
+            var lastCustomerName = db.TblCustomer.Where(x => x.CustomerId == lastCustomerId).Select(z => z.CustomerName).FirstOrDefault();
+            lblLastAddedCustomer.Text = lastCustomerName.ToString();
+
+            // Ülke Çeşitliliği Sayısı
+            var countryDiversityNumber = db.TblCustomer.Select(x => x.CustomerCountry).Distinct().Count();
+            lblCountryDiversityNumber.Text = countryDiversityNumber.ToString();
         }
 
         private void lblOrderCount_Click(object sender, EventArgs e)
